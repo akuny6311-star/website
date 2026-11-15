@@ -1,0 +1,13 @@
+// Bank soal Quick Quiz: 10 soal fundamental arsitektur web.
+window.QUIZ_QUESTIONS = [
+ {q:"Apa yang dimaksud arsitektur web?",a:["Susunan dan hubungan komponen pembentuk aplikasi web","Bahasa untuk memberi warna halaman","Nama sebuah browser","Teknik memperbesar gambar"],c:0,e:"Arsitektur web menjelaskan komponen, tanggung jawab, dan cara komponen berkomunikasi."},
+ {q:"Komponen yang biasanya menyimpan data aplikasi secara persisten adalah ...",a:["CSS","Database","Browser history","HTML"],c:1,e:"Database menyimpan data agar dapat diakses dan dikelola oleh aplikasi."},
+ {q:"Maintainability paling tepat berarti ...",a:["Kemampuan aplikasi berjalan tanpa internet","Kemudahan perangkat lunak diperbaiki, dipahami, dan dikembangkan","Kecepatan mengetik kode","Jumlah halaman dalam website"],c:1,e:"Maintainability berkaitan dengan kemudahan pemeliharaan dan perubahan perangkat lunak."},
+ {q:"Apa risiko utama duplikasi kode?",a:["Warna halaman berubah","Perubahan harus dilakukan di banyak tempat dan rawan tidak konsisten","Database otomatis terhapus","Browser menjadi server"],c:1,e:"Duplikasi membuat perbaikan berulang dan meningkatkan risiko inkonsistensi."},
+ {q:"Dalam MVC, komponen yang mengelola data dan logika bisnis adalah ...",a:["Model","View","Controller","Browser"],c:0,e:"Model menangani data dan aturan bisnis, termasuk interaksi dengan penyimpanan data."},
+ {q:"Komponen MVC yang bertugas menerima input/permintaan dan mengatur alur adalah ...",a:["CSS","Model","Controller","View"],c:2,e:"Controller menerima aksi pengguna, memanggil Model, lalu menentukan respons/tampilan."},
+ {q:"Dalam SSR, HTML halaman umumnya dibuat oleh ...",a:["Server","Mouse pengguna","File gambar","localStorage saja"],c:0,e:"Pada SSR server merender HTML lalu mengirimkannya ke browser."},
+ {q:"Ciri umum SPA adalah ...",a:["Setiap klik selalu memuat seluruh dokumen baru","Navigasi dan pembaruan tampilan dapat dilakukan di browser tanpa reload dokumen penuh","Tidak menggunakan JavaScript","Tidak dapat memanggil API"],c:1,e:"SPA mengelola perubahan tampilan di sisi klien; data sering diambil melalui API."},
+ {q:"Manakah pernyataan yang benar tentang MVC dan SPA?",a:["Keduanya istilah yang sama","MVC adalah pola pemisahan tanggung jawab, SPA adalah pendekatan aplikasi/rendering sisi klien","SPA selalu memakai PHP","MVC hanya dapat dipakai untuk game"],c:1,e:"MVC dan SPA menjelaskan aspek berbeda dan dapat digunakan bersama."},
+ {q:"Untuk halaman artikel publik yang membutuhkan HTML awal mudah diindeks, pendekatan yang sering cocok adalah ...",a:["SSR","SPA tanpa strategi SEO","Hanya file CSS","localStorage"],c:0,e:"SSR sering membantu konten tersedia dalam HTML awal; hasil SEO tetap bergantung implementasi."}
+];
