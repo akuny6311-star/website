@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Web Architecture Challenge - permainan edukatif Pertemuan 4 Informatika">
+  <meta name="theme-color" content="#071426">
+  <title>Web Architecture Challenge | Pertemuan 4</title>
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Web Architecture Challenge">
+      <span class="brand-mark">WA</span><span>WEB ARCHITECTURE <b>CHALLENGE</b><small>PERTEMUAN 4 · INFORMATIKA</small></span>
+    </a>
+    <div class="top-actions"><span class="pill">● OFFLINE READY</span><button id="soundToggle" class="icon-btn" aria-label="Aktif/nonaktifkan suara">♫ <span>Suara: ON</span></button></div>
+  </header>
+
+  <main class="shell">
+    <section id="homeScreen" class="screen active">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">MISSION BRIEFING / 04</span>
+          <h1>Pahami arsitektur.<br><em>Taklukkan tantangan.</em></h1>
+          <p>Uji pemahamanmu tentang arsitektur web, maintainability, MVC, SSR, dan SPA melalui empat mini-game interaktif.</p>
+          <div class="hero-points"><span>✦ 4 mini-games</span><span>◷ ±20 menit</span><span>★ Skor & badge</span></div>
+        </div>
+        <div class="hero-orb"><div class="orb-ring ring-a"></div><div class="orb-ring ring-b"></div><div class="orb-core"><span>WEB</span><b>04</b></div><span class="float-code code-a">&lt;/MVC&gt;</span><span class="float-code code-b">SSR ↔ SPA</span></div>
+      </div>
+      <div class="panel start-panel">
+        <div><span class="eyebrow">IDENTITAS PEMAIN</span><h2>Siap memulai misi?</h2><p class="muted">Masukkan nama untuk mencatat hasil pada perangkat ini.</p></div>
+        <form id="startForm" class="start-form"><label for="playerName">Nama pemain</label><div class="input-row"><input id="playerName" maxlength="28" required placeholder="Contoh: Andi Pratama"><button class="btn btn-primary" type="submit">MULAI MISI <span>→</span></button></div></form>
+      </div>
+      <div class="game-grid">
+        <article class="game-card"><div class="card-icon">⚡</div><span class="card-number">01 / KNOWLEDGE</span><h3>Quick Quiz</h3><p>10 pertanyaan fundamental arsitektur web.</p><span class="card-meta">Pilihan ganda · 5 menit</span></article>
+        <article class="game-card"><div class="card-icon">▦</div><span class="card-number">02 / ARCHITECTURE</span><h3>MVC Sorting</h3><p>Tempatkan tanggung jawab ke Model, View, atau Controller.</p><span class="card-meta">Klasifikasi · 5 menit</span></article>
+        <article class="game-card"><div class="card-icon">⇄</div><span class="card-number">03 / RENDERING</span><h3>SSR vs SPA Battle</h3><p>Kenali karakteristik dua pendekatan rendering.</p><span class="card-meta">Tantangan cepat · 5 menit</span></article>
+        <article class="game-card"><div class="card-icon">⌘</div><span class="card-number">04 / CODE QUALITY</span><h3>Find the Bug</h3><p>Temukan risiko maintainability dalam skenario kode.</p><span class="card-meta">Analisis kasus · 5 menit</span></article>
+      </div>
+      <div class="panel leaderboard"><div class="section-heading"><div><span class="eyebrow">LOCAL RECORDS</span><h2>Leaderboard perangkat ini</h2></div><button id="clearScores" class="btn btn-ghost btn-small">Hapus data</button></div><div id="leaderboardList" class="leaderboard-list"><p class="muted">Belum ada skor. Jadilah pemain pertama!</p></div><p class="tiny muted">Catatan: leaderboard disimpan di browser/perangkat ini (localStorage), bukan papan peringkat online bersama.</p></div>
+    </section>
+
+    <section id="gameScreen" class="screen">
+      <div class="game-head"><button id="backHome" class="btn btn-ghost">← Beranda</button><div><span id="gameKicker" class="eyebrow">MISSION 01</span><h2 id="gameTitle">Quick Quiz</h2></div><div class="score-chip">SKOR <b id="liveScore">0</b></div></div>
+      <div class="progress-wrap"><div class="progress-label"><span id="progressText">Pertanyaan 1 dari 10</span><span id="timerText">00:00</span></div><div class="progress-track"><div id="progressBar" class="progress-fill"></div></div></div>
+      <div id="gameContent" class="panel game-content"></div>
+    </section>
+
+    <section id="resultScreen" class="screen">
+      <div class="result-hero"><span class="eyebrow">MISSION REPORT</span><div class="result-medal">★</div><h1 id="resultTitle">Misi selesai!</h1><p id="resultSubtitle" class="muted">Kerja bagus.</p><div class="final-score"><strong id="finalScore">0</strong><span>POIN</span></div><div id="resultBadge" class="badge-award">WEB EXPLORER</div></div>
+      <div class="result-stats"><div><b id="correctCount">0</b><span>Benar</span></div><div><b id="wrongCount">0</b><span>Perlu ditinjau</span></div><div><b id="accuracy">0%</b><span>Akurasi</span></div></div>
+      <div id="resultReview" class="panel review-panel"></div>
+      <div class="result-actions"><button id="playAgain" class="btn btn-primary">MAIN LAGI ↻</button><button id="resultHome" class="btn btn-ghost">KEMBALI KE BERANDA</button></div>
+    </section>
+  </main>
+  <footer><span>WEB ARCHITECTURE CHALLENGE</span><span>Belajar · Berpikir · Membangun</span></footer>
+  <script src="assets/js/quiz.js"></script>
+  <script src="assets/js/mvc-game.js"></script>
+  <script src="assets/js/ssr-spa-game.js"></script>
+  <script src="assets/js/maintainability-game.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
